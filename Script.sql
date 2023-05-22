@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS GenresOfThePerformer (
 CREATE TABLE IF NOT EXISTS Album (
 	id SERIAL PRIMARY KEY NOT NULL,
 	name VARCHAR(60) NOT NULL,
-	year_of_execution DATE CHECK(year_of_execution >= '1990-01-01') NOT NULL
+	year_of_execution DATE CHECK(year_of_execution >=DATE '1990-01-01') NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS AlbumPerformers (
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS Track (
 CREATE TABLE IF NOT EXISTS Collection (
 	id SERIAL PRIMARY KEY NOT NULL,
 	name VARCHAR(60) NOT NULL,
-	year_of_release DATE CHECK(year_of_release >= '1990-01-01') NOT NULL
+	year_of_release DATE CHECK(year_of_release >=DATE  '1990-01-01') NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS CollectionTracks (
